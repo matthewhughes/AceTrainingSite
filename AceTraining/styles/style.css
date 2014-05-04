@@ -1,0 +1,14 @@
+body {
+	font-family: 'Droid Sans', 'sans-serif';
+	background-image:url('../assets/green_cup.png');
+	background-color: green;
+}
+
+header {
+	display: inline;
+}
+
+aside {
+	margin-left: 70%;
+	width: 300px;
+}

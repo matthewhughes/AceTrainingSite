@@ -19,11 +19,11 @@
 
 class DB {
   // initial connection
-  public static $dbName = '';
-  public static $user = '';
-  public static $password = '';
+  public static $dbName = 'AceTraining';
+  public static $user = 'root';
+  public static $password = 'root';
   public static $host = 'localhost';
-  public static $port = null;
+  public static $port = 8889;
   public static $encoding = 'latin1';
   
   // configure workings
