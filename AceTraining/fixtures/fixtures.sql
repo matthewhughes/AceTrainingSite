@@ -1,9 +1,10 @@
-DROP DATABASE IF EXISTS AceTraining;
-CREATE DATABASE AceTraining;
-USE AceTraining;
-
 DROP TABLE IF EXISTS USERS;
 DROP TABLE IF EXISTS USER_INFO;
+
+DROP USER 'register'@'localhost';
+DROP USER 'student'@'localhost';
+DROP USER 'tutor'@'localhost';
+DROP USER 'administrator'@'localhost';
 
 CREATE USER 'register'@'localhost' IDENTIFIED BY 'register';
 CREATE USER 'student'@'localhost' IDENTIFIED BY 'student';
