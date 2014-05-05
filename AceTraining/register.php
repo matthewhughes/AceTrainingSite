@@ -12,7 +12,12 @@
 	<script src="scripts/script.js"></script>
 </head>
 <body>
-
+	<header>
+		<?php
+		require('logic/headerBar.php');
+		?>
+	</header>
+	<section>
 	<?php
 
 	$registrationForm = '	<form action="logic/registerLogic.php" method="post">
@@ -27,6 +32,10 @@
 		echo $registrationForm;
 	}
 	?>
-	
+	</section>
+	<footer>
+		<p>Copyright AceTraining 2014</p>
+		<p> Site last modified on <script>WriteLastModified();</script></p>
+	</footer>
 </body>
 </html>

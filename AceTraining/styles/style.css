@@ -6,9 +6,29 @@ body {
 
 header {
 	display: inline;
+	border-color: black;
+	-moz-border-radius: 15px;
+    border-radius: 15px;
+    height: 10vh;
+
+}
+
+header a {
+	margin-right: 10px;
+}
+
+section {
+	height: 80vh;
 }
 
 aside {
+	padding: 10px;
 	margin-left: 70%;
-	width: 300px;
+	width: 200px;
+	background-color: white;
+}
+
+
+footer { 
+	height: 10vh;
 }

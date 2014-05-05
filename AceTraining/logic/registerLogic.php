@@ -23,7 +23,8 @@
 
     function InsertIntoDB($username, $password){
     	DB::query('INSERT INTO USERS (username, password) values (%s, %s)', $username, $password);
-    	header('Location: http://localhost:8888/AceTraining/');
+    	DB::query('INSERT INTO USER_INFO(username) values (%s)', $username);
+        header('Location: http://localhost:8888/AceTraining/');
     }
 
 ?>

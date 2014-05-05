@@ -1,37 +1,43 @@
 <?php
 session_start();
+
+if($_SESSION['Category'] == 'student'){
+	header('Location: http://localhost:8889/AceTraining/index.php');
+}
 ?>
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome To Ace Training</title>
+	<title>Document</title>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="styles/style.css">
 	<script src="scripts/script.js"></script>
 </head>
 <body>
-
 	<header>
-
 		<?php
 		require('logic/headerBar.php');
 		?>
-	
 	</header>
 	<section>
-    <?php 
-
-		$loginform = '<aside> <form action="logic/login.php" method="post">
-		<p>Username: <input type="text" name="username" id="password" required></p>
-		<p>Password: <input type="password" name="password" id="password"></p>
-		<p><input type="submit" name="submit"></p>
-		</form></aside>';
-
-		if(!isset($_SESSION['LoggedIn'])){
-			echo($loginform);
-		}
-	?>
+		<table>
+			<th>
+				<tr>ID</tr>
+				<tr>Username</tr>
+				<tr>Category</tr>
+				<tr>Address 1</tr>
+				<tr>Address 2</tr>
+				<tr>City</tr>
+				<tr>Postcode</tr>
+				<tr>Landline</tr>
+				<tr>Cell Phone</tr>
+				<tr>Email</tr>
+			</th>
+			<?php
+				require('logic/showStudentsLogic.php');
+			?>
+		</table>
 	</section>
 	<footer>
 		<p>Copyright AceTraining 2014</p>
