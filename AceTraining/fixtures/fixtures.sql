@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS USERS;
 DROP TABLE IF EXISTS USER_INFO;
 DROP TABLE IF EXISTS COURSE;
+DROP TABLE IF EXISTS REGISTEREDUSERS;
 
 FLUSH PRIVILEGES;
 
@@ -45,7 +46,15 @@ CREATE TABLE COURSE (
     room_number varchar(10),
     UNIQUE (course_name),
     primary key(course_id)
-);
+) ENGINE=InnoDB;
+
+CREATE TABLE REGISTEREDUSERS(
+    id int not null auto_increment,
+    student_id varchar(255),
+    course_name varchar(255),
+    approved BOOLEAN NOT NULL DEFAULT 0,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB;
 
 INSERT INTO USERS (username, password, category) VALUES ('student', 'password', 'student');
 INSERT INTO USERS (username, password, category) VALUES ('administrator', 'password', 'administrator');

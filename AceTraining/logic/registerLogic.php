@@ -4,9 +4,15 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $passwordCheck = $_POST['password2'];
+
+
 
     if($username == '' || $password == ''){
     	echo '<strong>' . 'Username and Password cannot be null' . '</password>';
+    } else if ($password == $passwordCheck) {
+        echo '<strong>' . 'Passwords Have To Match' . '</password>';
+        echo '<strong>' . 'If you are seeing this message, your browser might not be handling Javascript correctly' . '</password>';
     } else {
     	CheckExists($username, $password);
     }

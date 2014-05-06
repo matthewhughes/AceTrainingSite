@@ -9,11 +9,15 @@ if($_SESSION['Category'] == 'student'){
 <!doctype html>
 <html lang="en">
 <head>
+	<meta name="description" content="Ace Training">
 	<meta charset="UTF-8">
 	<title>Add A Course</title>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="styles/form.css">
 	<script src="scripts/script.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 </head>
 <body>
 	<header>
@@ -22,6 +26,10 @@ if($_SESSION['Category'] == 'student'){
 		?>
 	</header>
 	<section>
+		<div id="title">
+<h3>Add A Course</h3>
+<p>Add a course here</p>
+</div>
 		<form action="logic/addNewCourse.php" method="post">
 			<p>Course Name: <input type="text" name="CourseName" id="CourseName"></p>
 			<p>Description: <textarea name="Description" id="Description" cols="30" rows="10"></textarea></p>

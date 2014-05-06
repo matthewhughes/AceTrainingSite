@@ -8,11 +8,13 @@ if($_SESSION['Category'] == 'student'){
 <!doctype html>
 <html lang="en">
 <head>
+	<meta name="description" content="Ace Training">
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>See All Users</title>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="styles/style.css">
 	<script src="scripts/script.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 <body>
 	<header>
@@ -21,23 +23,25 @@ if($_SESSION['Category'] == 'student'){
 		?>
 	</header>
 	<section>
+		<div class="table">
 		<table>
-			<th>
-				<tr>ID</tr>
-				<tr>Username</tr>
-				<tr>Category</tr>
-				<tr>Address 1</tr>
-				<tr>Address 2</tr>
-				<tr>City</tr>
-				<tr>Postcode</tr>
-				<tr>Landline</tr>
-				<tr>Cell Phone</tr>
-				<tr>Email</tr>
-			</th>
+			<tr>
+				<td>ID</td>
+				<td>Username</td>
+				<td>Category</td>
+				<td>Address 1</td>
+				<td>Address 2</td>
+				<td>City</td>
+				<td>Postcode</td>
+				<td>Landline</td>
+				<td>Cell Phone</td>
+				<td>Email</td>
+			</tr>
 			<?php
 				require('logic/showStudentsLogic.php');
 			?>
 		</table>
+	</div>
 	</section>
 	<footer>
 		<p>Copyright AceTraining 2014</p>
